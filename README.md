@@ -1,5 +1,6 @@
 # Front-End Gulp starter
 
+---
 
 ### TODO
 - [ ] Move tsconfig in config
@@ -8,6 +9,7 @@
 - [ ] Unit Testing with Jasmine
 - [ ] TsLint and SassLint
 
+---
 
 > A starter Kit for front-end developer including [JQuery](https://github.com/jquery/jquery), [Bootstrap Sass](https://github.com/twbs/bootstrap-sass), [Sass](http://sass-lang.com), [Jade](http://jade-lang.com), [Bower](https://bower.io), [TypeScript](https://www.typescriptlang.org), [Karma](https://karma-runner.github.io/)
 
@@ -40,6 +42,7 @@ gulp
 ```
 go to [http://localhost:3000](http://localhost:3000) in your browser
 
+---
 
 # Table of Contents
 * [File structure](#file-structure)
@@ -77,8 +80,8 @@ angular2-webpack-starter/
  │           ├──app.scss             * Main Sass files
  │           └──common/              * Sass common files
  │               ├──_bootstrap.scss  * Bootstrap Sass module import file
- │               ├──_mixins.scss     * put you own Sass mixins here
- │               └──_variables.scss  * for you sass variables
+ │               ├──_mixins.scss     * for you own Sass mixins here
+ │               └──_variables.scss  * for your sass variables
  │
  ├──test/                            * Testing directory
  │    └──spec/                       * Jasmine test definitions
