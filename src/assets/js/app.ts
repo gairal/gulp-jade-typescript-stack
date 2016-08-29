@@ -1,11 +1,10 @@
 /// <reference path="../../../typings/index.d.ts" />
 import $ = require("jquery");
-//import { Calculator } from './calculator/calculator.controller';
-//import { CalculatorModel } from './calculator/calculator.model';
+import { Calculator } from './calculator/calculator';
 
-export class App {
+export class App extends Calculator {
     constructor() {
-        //TODO
+        super();
     }
 }
 
