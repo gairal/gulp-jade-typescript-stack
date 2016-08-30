@@ -3,10 +3,10 @@
 ---
 
 ### TODO
-- [ ] Add a JS example
+- [ ] Check compilation
 - [ ] Auto-reload
-- [ ] Unit Testing with Jasmine
 - [ ] TsLint and SassLint
+- [ ] Unit Testing with Jasmine
 
 ---
 
