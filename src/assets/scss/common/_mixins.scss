@@ -1,6 +1,6 @@
 /* ==============================util functions=================================== */
 @mixin background-gradient-top-down($bgcolor, $startcolor, $endcolor, $img:"") {
-    background-color: $bgcolor $img; 
+    background-color: $bgcolor $img;
     @if $img == "" {
         background-image: -webkit-gradient(linear, left top, left bottom, from($startcolor), to($endcolor));
         background-image: -webkit-linear-gradient(top, $startcolor, $endcolor);
@@ -114,7 +114,7 @@
 
 @mixin font-face($font-family, $file-path, $font-weight, $font-style) {
     @font-face {
-        font-family: $font-family;        
+        font-family: $font-family;
         font-weight: $font-weight;
         font-style: $font-style;
         src: url('../fonts/#{$file-path}.eot');
@@ -210,5 +210,3 @@
         clear: both;
     }
 }
-
-@import '../../../../vendor/bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss';

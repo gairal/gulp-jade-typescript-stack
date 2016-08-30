@@ -3,7 +3,6 @@
 ---
 
 ### TODO
-- [ ] Move tsconfig in config
 - [ ] Add a JS example
 - [ ] Auto-reload
 - [ ] Unit Testing with Jasmine
@@ -11,7 +10,7 @@
 
 ---
 
-> A starter Kit for front-end developer including [JQuery](https://github.com/jquery/jquery), [Bootstrap Sass](https://github.com/twbs/bootstrap-sass), [Sass](http://sass-lang.com), [Jade](http://jade-lang.com), [Bower](https://bower.io), [TypeScript](https://www.typescriptlang.org), [Karma](https://karma-runner.github.io/)
+> A starter Kit for front-end developer including [JQuery](https://github.com/jquery/jquery), [Bootstrap Sass](https://github.com/twbs/bootstrap-sass), [Sass](http://sass-lang.com), [Jade](http://jade-lang.com), [TypeScript](https://www.typescriptlang.org), [Karma](https://karma-runner.github.io/)
 
 This seed repo serves as a starter kit for front-end developer that needs an environment allowing them to speed up development while ensuring quality.
 
@@ -25,7 +24,6 @@ This seed repo serves as a starter kit for front-end developer that needs an env
 * Node version >= 4
 * NPM
 * Sass `gem install sass`
-* Bower `npm install bower -g`
 
 ```bash
 # clone the repo
@@ -63,7 +61,8 @@ angular2-webpack-starter/
  │   ├──.htmlhintrc                  * htmlhint configuration file
  │   ├──.jshintrc                    * jshint configuration file
  │   ├──config.json                  * variables used got Gulp tasks
- │   └──karma.conf.js                * Karma configuration file
+ │   ├──karma.conf.js                * Karma configuration file
+ │   └──tsconfig.json                    * TypeScript configuration
  │
  ├──src/                             * our source files that will be compiled to javascript
  │   ├──index.pug                    * our index.html
@@ -71,11 +70,12 @@ angular2-webpack-starter/
  │   ├──tmpl/                        * where you keep your pug templates
  │   │   └──layout.pug               * the main pug layout
  │   │
+ │   ├──app/                          * JavaScript/TypeScript files
+ │   │
  │   ├──root/                        * files that will be copied to the root of the compiled site (robots.txt, favicon, ...)
  │   │
  │   └──assets/                      * static assets are served here
  │       ├──img/                     * images
- │       ├──js/                      * JavaScript/TypeScript files
  │       └──scss/                    * Sass files
  │           ├──app.scss             * Main Sass files
  │           └──common/              * Sass common files
@@ -87,11 +87,8 @@ angular2-webpack-starter/
  │    └──spec/                       * Jasmine test definitions
  │
  │
- ├──.bowerrc                         * Change the default Bower dependency directory
- ├──bower.json                       * Bower dependency list
  ├──gulpfile.js                      * gulp main configuration file
  ├──package.json                     * what npm uses to manage it's dependencies
- ├──tsconfig.json                    * TypeScript configuration
  └──typings.json                     * Typings list (JQuery and Bootstrap)
 ```
 # Getting Started
@@ -103,7 +100,6 @@ You need to install the following on you system
 
 Then install tools you'll need to run the app
 * sass (`gem install sass`)
-* bower (`npm install bower -g`)
 * gulp (`npm install gulp -g`)
 * typings (`npm install typings -g`)
 * typescript (`npm install typescript -g`)
@@ -132,7 +128,7 @@ gulp run:compile
 # build files in ./build/ (Typescript, Sass, Jade) and validate them
 gulp build
 # "compile" files in ./compile/
-# minify and concate every css and js including bower dependencies from ./vendor/ dir
+# minify and concatenate every css and js including
 # Optimize images compression
 # Site ready for production
 gulp compile

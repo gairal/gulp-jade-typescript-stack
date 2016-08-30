@@ -1,12 +1,4 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "noImplicitAny": true,
-    "experimentalDecorators": true
-  },
-  "exclude": [
-    "node_modules",
-    "vendor"
-  ],
+  "project": "config/tsconfig.json",
   "compileOnSave": false
 }

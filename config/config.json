@@ -12,7 +12,7 @@
         "css": "assets/css/",
         "images": "assets/img/",
         "fonts": "assets/fonts/",
-        "js": "assets/js",
+        "js": "app/",
         "root": "root/"
     },
     "files": {
@@ -26,6 +26,7 @@
         "css": "**/*.css",
         "js": "**/*.js",
         "ts": "**/*.ts",
+        "tsindex": "**/app.ts",
         "fonts": "**",
         "images": "{,*/,*/*/}*.{png,jpg,jpeg,gif}",
         "root": "**",
@@ -33,10 +34,7 @@
         "static": "**/*.*"
     },
     "vendor":{
-        "jsCss": [
-            "vendor/jquery/dist/jquery.js",
-            "vendor/bootstrap-sass/assets/javascripts/bootstrap.js"
-        ],
+        "jsCss": [],
         "assets": []
     },
     "env": {

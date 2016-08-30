@@ -5,8 +5,6 @@ var gulp = require('gulp');
 var glob = require('glob');
 var replace = require('gulp-replace');
 var jshint = require('gulp-jshint');
-var ts = require('gulp-typescript');
-var tsProject = ts.createProject('tsconfig.json');
 var browserify = require('browserify');
 var tsify = require('tsify');
 var source = require('vinyl-source-stream');
@@ -25,7 +23,9 @@ gulp.task('ts:build', function() {
       basedir: '.',
       entries: glob.sync(conf.base.src + conf.files.ts)
     })
-    .plugin(tsify, tsProject);
+    .plugin(tsify, {
+      'project': 'config/tsconfig.json'
+    });
 
   return bundler.bundle()
     .on('error', function (error) { console.error(error.toString()); })
