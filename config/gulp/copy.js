@@ -22,7 +22,7 @@ gulp.task('copy:build', function () {
     ], {base: './'})
     .pipe(gulp.dest(conf.base.build));
   //Scripts
-  gulp.src(conf.vendor.jsCss, {base: './'})
+  gulp.src(conf.vendor.js, {base: './'})
     .pipe(gulp.dest(conf.base.build));
   return gulp.src(conf.vendor.assets, {base: './'})
     .pipe(gulp.dest(conf.base.build));

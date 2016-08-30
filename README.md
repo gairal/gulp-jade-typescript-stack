@@ -3,17 +3,18 @@
 ---
 
 ### TODO
-- [ ] Check bootstrap css working
+- [ ] Remove unused packages
+- [ ] Check bootstrap js working
 - [ ] Check compilation
 - [ ] Auto-reload
-- [ ] TsLint and SassLint
 - [ ] Unit Testing with Jasmine
+- [ ] README Configuration section
 
 ---
 
 > A starter Kit for front-end developer including [JQuery](https://github.com/jquery/jquery), [Bootstrap Sass](https://github.com/twbs/bootstrap-sass), [Sass](http://sass-lang.com), [Jade](http://jade-lang.com), [TypeScript](https://www.typescriptlang.org), [Karma](https://karma-runner.github.io/)
 
-This seed repo serves as a starter kit for front-end developer that needs an environment allowing them to speed up development while ensuring quality.
+This seed repo is a starter kit for front-end developer that needs an environment allowing them to speed up development while ensuring good practice and overall quality.
 
 * Best practice for HTML5, CSS and JavaScript organization
 * Code validation (HTML, JS, CSS)
@@ -58,9 +59,9 @@ go to [http://localhost:3000](http://localhost:3000) in your browser
 angular2-webpack-starter/
  ├──config/                          * configuration files and Gulp taks
  │   ├──gulp/                        * Gulp tasks descriptions
- │   ├──.csslintrc                   * csslint configuration file
  │   ├──.htmlhintrc                  * htmlhint configuration file
  │   ├──.jshintrc                    * jshint configuration file
+ │   ├──sass-lint.yml                * sasslint configuration file (Yaml format)
  │   ├──config.json                  * variables used got Gulp tasks
  │   ├──karma.conf.js                * Karma configuration file
  │   └──tsconfig.json                    * TypeScript configuration

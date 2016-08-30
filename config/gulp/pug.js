@@ -1,7 +1,7 @@
 var conf = require('../config.json');
 var pkg = require('../../package.json');
 var gulp = require('gulp');
-var htmlhint = require('gulp-htmlhint');
+var puglint = require('gulp-pug-lint');
 var pug = require('gulp-pug');
 var inject = require('gulp-inject');
 
@@ -12,11 +12,11 @@ gulp.task('pug:build', function() {
   };
 
   gulp.src([conf.base.src + conf.files.pug])
+    .pipe(puglint())
     .pipe(pug({
       locals: myLocals,
       pretty: true
     }))
-    .pipe(inject(gulp.src(conf.vendor.jsCss, {read: false}), {addRootSlash: false}))
-    .pipe(gulp.dest(conf.base.build))
-    .pipe(htmlhint.reporter());
+    .pipe(inject(gulp.src(conf.vendor.js, {read: false}), {addRootSlash: false}))
+    .pipe(gulp.dest(conf.base.build));
 });

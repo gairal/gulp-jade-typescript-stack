@@ -5,13 +5,14 @@ export class Calculator implements ICalculator {
   private _currNum: number;
   private _currOpe: Operation;
   private _isEq: boolean;
+  
   constructor() {
       this.reset();
   }
 
-  //getter / setter
+  //getters / setters
   get currNum():number {
-        return this._currNum;
+    return this._currNum;
   }
 
   private operation(ope?: Operation){
@@ -37,7 +38,6 @@ export class Calculator implements ICalculator {
   }
 
   stack(num: number): void {
-    console.log("stack");
     if(!this._currNum || this._isEq) {
       this._currNum = 0;
       this._isEq = false;
@@ -46,19 +46,19 @@ export class Calculator implements ICalculator {
     this._currNum = +(String(this._currNum) + String(num));
   }
 
-  add(num: number): void {
+  add(): void {
     this.operation(Operation.add);
   }
 
-  remove(num: number): void {
+  remove(): void {
     this.operation(Operation.remove);
   }
 
-  multiply(num: number): void {
+  multiply(): void {
     this.operation(Operation.multiply);
   }
 
-  divide(num: number): void {
+  divide(): void {
     this.operation(Operation.divide);
   }
 

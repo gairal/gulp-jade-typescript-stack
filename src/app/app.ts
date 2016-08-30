@@ -1,31 +1,31 @@
 /// <reference path="../../typings/index.d.ts" />
-import $ = require("jquery");
+import jQuery = require("jquery");
+[jQuery, $];
+
 import { Calculator } from './calculator/calculator';
 
 export class App {
   private _$input: any;
   private _calculator: Calculator;
+  private _test: string = 'toto';
+
   constructor() {
     this._calculator = new Calculator();
     this._$input = $('#res');
-    this.addEvent(this);
-    this.render();
-  }
-
-  get calculator(): Calculator {
-    return this._calculator;
+    this.addEvent();
   }
 
   private render(): void {
     this._$input.val(this._calculator.currNum);
   }
 
-  private addEvent(app: App): void {
+  private addEvent(): void {
     let $buttons:any = $(':button');
 
-    $.each($buttons, function(i: number, v: any){
+    $.each($buttons, (i: number, v: any) => {
       let elt: any = $(v);
       let val: string = elt.attr('data-calculator');
+      let method: any;
       if(val) {
         switch(val){
           case '0':
@@ -38,49 +38,35 @@ export class App {
           case '7':
           case '8':
           case '9':
-            elt.click({app: app}, function(ev: any) {
-              ev.data.app.calculator.stack(+val);
-              ev.data.app.render();
-            });
+            method = () => {this._calculator.stack(+val)};
             break;
           case '+':
-            elt.click({app: app}, function(ev: any) {
-                ev.data.app.calculator.add();
-                ev.data.app.render();
-            });
+            method = () => {this._calculator.add();};
             break;
           case '-':
-            elt.click({app: app}, function(ev: any) {
-                ev.data.app.calculator.remove();
-                ev.data.app.render();
-            });
+            method = () => {this._calculator.remove();};
             break;
           case '/':
-            elt.click({app: app}, function(ev: any) {
-                ev.data.app.calculator.divide();
-                ev.data.app.render();
-            });
+            method = () => {this._calculator.divide();};
             break;
           case 'x':
-            elt.click({app: app}, function(ev: any) {
-                ev.data.app.calculator.multiply();
-                ev.data.app.render();
-            });
+            method = () => {this._calculator.multiply();};
             break;
           case 'AC':
-            elt.click({app: app}, function(ev: any) {
-                ev.data.app.calculator.reset();
-                ev.data.app.render();
-            });
+            method = () => {this._calculator.reset();};
             break;
           case '=':
-            elt.click({app: app}, function(ev: any) {
-                ev.data.app.calculator.total();
-                ev.data.app.render();
-            });
+            method = () => {this._calculator.total();};
             break;
           default:
               console.log('no actions');
+        }
+
+        if(method) {
+          elt.click(() => {
+            method();
+            this.render();
+          });
         }
       }
     });
