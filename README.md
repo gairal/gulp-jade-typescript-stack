@@ -3,6 +3,7 @@
 ---
 
 ### TODO
+- [ ] Check bootstrap css working
 - [ ] Check compilation
 - [ ] Auto-reload
 - [ ] TsLint and SassLint
