@@ -3,12 +3,10 @@
 ---
 
 ### TODO
-- [ ] Remove unused packages
-- [ ] Check bootstrap js working
+- [ ] README Configuration section
 - [ ] Check compilation
 - [ ] Auto-reload
 - [ ] Unit Testing with Jasmine
-- [ ] README Configuration section
 
 ---
 

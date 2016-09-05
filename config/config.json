@@ -34,9 +34,7 @@
         "static": "**/*.*"
     },
     "vendor":{
-        "js": [
-            "node_modules/bootstrap-sass/assets/javascripts/bootstrap.js"
-        ],
+        "js": [],
         "assets": []
     },
     "env": {
