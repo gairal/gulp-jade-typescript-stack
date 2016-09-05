@@ -8,7 +8,7 @@
 
 ---
 
-> A starter Kit for front-end developer including [JQuery](https://github.com/jquery/jquery), [Bootstrap Sass](https://github.com/twbs/bootstrap-sass), [Sass](http://sass-lang.com), [Jade](http://jade-lang.com), [TypeScript](https://www.typescriptlang.org), [Karma](https://karma-runner.github.io/)
+> A starter Kit for front-end developer including [Gulp](http://gulpjs.com), [JQuery](https://github.com/jquery/jquery), [Bootstrap Sass](https://github.com/twbs/bootstrap-sass), [Sass](http://sass-lang.com), [Jade](http://jade-lang.com), [TypeScript](https://www.typescriptlang.org), [Karma](https://karma-runner.github.io/)
 
 This seed repo is a starter kit for front-end developer that needs an environment allowing them to speed up development while ensuring good practice and overall quality.
 
@@ -108,7 +108,7 @@ Then install tools you'll need to run the app
 * `npm install` to install all dependencies
 * `gulp` to start the dev server
 
-## Running the site
+## Running the app
 After all dependencies are installed, just run `gulp` to start a local server using `browser-sync` which will watch your files and build them.
 browser-sync will display the address and port of your server (by default, `http://0.0.0.0:3000`).
 
