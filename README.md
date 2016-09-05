@@ -3,9 +3,7 @@
 ---
 
 ### TODO
-- [ ] README Configuration section
-- [ ] Check compilation
-- [ ] Auto-reload
+- [ ] Fix auto-reload
 - [ ] Unit Testing with Jasmine
 
 ---
@@ -49,7 +47,6 @@ go to [http://localhost:3000](http://localhost:3000) in your browser
     * [Installing](#installing)
     * [Running the app](#running-the-app)
 * [Configuration](#configuration)
-* [Todo](#todo)
 * [License](#license)
 
 # File structure
@@ -149,7 +146,12 @@ gulp delivery
 gulp deploy
 ```
 # Configuration
-TODO
+Most of the configuration files are in ./config
+* `config.json`: contains the paths to the various kind of files used by Gulp
+* `.htmlhintrc` :htmlhint config files
+* `.jshintrc`: jshint config file (used only if using ES5 JavaScript)
+* `sass-lint.yml`: sasslint config file
+* `tsconfig.json`: TypeScript config file
 
 # License
 [MIT](/LICENSE.md)
