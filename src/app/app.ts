@@ -3,7 +3,7 @@ declare var $: any;
 
 import { Calculator } from './calculator/calculator';
 
-export class App {
+class App {
   private _$input: any;
   private _calculator: Calculator;
   private _test: string = 'toto';
