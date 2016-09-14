@@ -5,6 +5,11 @@ var puglint = require('gulp-pug-lint');
 var pug = require('gulp-pug');
 var inject = require('gulp-inject');
 
+function handleError(err) {
+  console.log(err.toString());
+  this.emit('end');
+}
+
 gulp.task('pug:build', function() {
   'use strict';
   var myLocals = {
@@ -17,6 +22,7 @@ gulp.task('pug:build', function() {
       locals: myLocals,
       pretty: true
     }))
+    .on('error', handleError)
     .pipe(inject(gulp.src(conf.vendor.js, {read: false}), {addRootSlash: false}))
     .pipe(gulp.dest(conf.base.build));
 });

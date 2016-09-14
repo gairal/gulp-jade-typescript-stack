@@ -4,6 +4,11 @@ var sass = require('gulp-sass');
 var sassLint = require('gulp-sass-lint');
 var autoprefixer = require('gulp-autoprefixer');
 
+function handleError(err) {
+  console.log(err.toString());
+  this.emit('end');
+}
+
 gulp.task('sass', function () {
   'use strict';
 
@@ -16,6 +21,7 @@ gulp.task('sass', function () {
 
   return gulp.src(conf.base.src + conf.path.sass + conf.files.sass)
     .pipe(sass())
+    .on('error', handleError)
     .pipe(autoprefixer({
         browsers: ['last 2 versions'],
         cascade: false
