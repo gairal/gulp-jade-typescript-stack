@@ -3,7 +3,6 @@
 ---
 
 ### TODO
-- [ ] Fix auto-reload
 - [ ] Unit Testing with Jasmine
 
 ---

@@ -25,16 +25,9 @@ gulp.task('browser-sync:compile', function() {
 
 gulp.task('watch', function () {
   'use strict';
-  gulp.watch(conf.base.src + conf.path.sass + conf.files.sassAll, ['sass']);
-  gulp.watch(conf.base.src + conf.path.js + conf.files.js, ['js:build']);
-  gulp.watch(conf.base.src + conf.path.js + conf.files.ts, ['ts:build']);
-  gulp.watch(conf.base.src + conf.files.pug, ['pug:build']);
-  gulp.watch([conf.base.src + conf.files.html, conf.base.src + conf.files.tmpl], ['html:build']);
-  // gulp.watch([
-  //     conf.base.build + conf.path.css + conf.files.css,
-  //     conf.base.build + conf.path.js + conf.files.js,
-  //     conf.base.build + conf.path.js + conf.files.ts,
-  //     conf.base.src + conf.files.pug,
-  //     conf.base.build + conf.files.html
-  // ]).on('change', browserSync.reload);
+  gulp.watch(conf.base.src + conf.path.sass + conf.files.sassAll, ['sass', browserSync.reload]);
+  gulp.watch(conf.base.src + conf.path.js + conf.files.js, ['js:build', browserSync.reload]);
+  gulp.watch(conf.base.src + conf.path.js + conf.files.ts, ['ts:build', browserSync.reload]);
+  gulp.watch(conf.base.src + conf.files.pug, ['pug:build', browserSync.reload]);
+  gulp.watch([conf.base.src + conf.files.html, conf.base.src + conf.files.tmpl], ['html:build', browserSync.reload]);
 });
