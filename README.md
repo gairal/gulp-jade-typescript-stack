@@ -50,7 +50,7 @@ go to [http://localhost:3000](http://localhost:3000) in your browser
 
 # File structure
 ```
-angular2-webpack-starter/
+gulp-jade-typescript-stack/
  ├──config/                          * configuration files and Gulp taks
  │   ├──gulp/                        * Gulp tasks descriptions
  │   ├──.htmlhintrc                  * htmlhint configuration file
