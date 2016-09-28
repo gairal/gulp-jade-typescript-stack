@@ -58,7 +58,7 @@ gulp-jade-typescript-stack/
  │   ├──sass-lint.yml                * sasslint configuration file (Yaml format)
  │   ├──config.json                  * variables used got Gulp tasks
  │   ├──karma.conf.js                * Karma configuration file
- │   └──tsconfig.json                    * TypeScript configuration
+ │   └──tsconfig.json                * TypeScript configuration
  │
  ├──src/                             * our source files that will be compiled to javascript
  │   ├──index.pug                    * our index.html
@@ -66,7 +66,7 @@ gulp-jade-typescript-stack/
  │   ├──tmpl/                        * where you keep your pug templates
  │   │   └──layout.pug               * the main pug layout
  │   │
- │   ├──app/                          * JavaScript/TypeScript files
+ │   ├──app/                         * JavaScript/TypeScript files
  │   │
  │   ├──root/                        * files that will be copied to the root of the compiled site (robots.txt, favicon, ...)
  │   │
