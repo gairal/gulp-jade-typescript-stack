@@ -19,7 +19,7 @@ This seed repo is a starter kit for front-end developer that needs an environmen
 ## Quick start
 ### Pre-requirements
 * Node version >= 4
-* NPM
+* NPM or Yarn
 * Sass `gem install sass`
 
 ```bash
@@ -29,8 +29,10 @@ git clone https://github.com/gairal/gulp-jade-typescript-stack.git
 # change directory to the repo
 cd gulp-jade-typescript-stack
 
-# install the repo with npm
+# install the repo with npm or yarn
 npm install
+OR
+yarn install
 
 # start the server
 gulp
@@ -84,13 +86,13 @@ gulp-jade-typescript-stack/
  │
  │
  ├──gulpfile.js                      * gulp main configuration file
- ├──package.json                     * what npm uses to manage it's dependencies
+ ├──package.json                     * what npm/yarn uses to manage it's dependencies
  └──typings.json                     * Typings list (JQuery and Bootstrap)
 ```
 # Getting Started
 ## Dependencies
 You need to install the following on you system
-* `node` and `npm` (`brew install node`)
+* `node` and `npm` (`brew install node`) or `yarn` (`brew install yarn`)
 * Ensure you running Node version >= 4.0.0
 * ruby (`brew install ruby`)
 
