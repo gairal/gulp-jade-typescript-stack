@@ -2,6 +2,10 @@
 
 ---
 
+This repository is not maintained anymore, prefer the [Babel/Webpack fork](https://github.com/gairal/gulp-webpack-es2015-stack) using ES2015 for better portability in the future of browsers.
+
+---
+
 ### TODO
 - [ ] Unit Testing with Jasmine
 
